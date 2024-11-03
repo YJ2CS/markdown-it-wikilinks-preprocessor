@@ -1,5 +1,13 @@
-'use strict';
 
+export default [
+    {
+        name: 'app/files-to-lint',
+        files: ['**/*.{ts,mts,tsx,vue}'],
+    },
 
-module.exports = [
-];
+    {
+        name: 'app/files-to-ignore',
+        ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+    },
+
+]
