@@ -1,4 +1,3 @@
-
 //  [[path |label]] [[wikilink | label]]  后面的 label可有可无
 const reg_wiki = /\[\[\s*([^\x00-\x1f\x7f]*?)\s*(\|\s*(.+?)\s*)?\s*\]\]/g;
 
@@ -14,4 +13,4 @@ const markdownItLinkPreprocessor = (md) => {
     });
 };
 
-module.exports =markdownItLinkPreprocessor;
+module.exports = markdownItLinkPreprocessor;
