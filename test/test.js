@@ -2,7 +2,6 @@
 
 const markdownItLinkPreprocessor = require('../index');
 const MarkdownIt = require('markdown-it');
-// const linkReplacePlugin = require('./linkReplacePlugin');
 
 const md = new MarkdownIt();
 md.use(markdownItLinkPreprocessor);
