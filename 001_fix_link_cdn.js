@@ -11,23 +11,10 @@ label：  (.+?)    -->   除换行符外的其他字符
 链接中包含 :// 的不匹配，来排除超链接
 */
 
-"use strict";
-const ob = hexo.config.obsidian_link;
-const fs = require("fs");
-let options = {
-  flags: "a", //
-  encoding: "utf8", // utf8编码
-};
-let stderr = fs.createWriteStream("./a.log", options);
-// 创建logger
-let logger = new console.Console(stderr);
-fs.writeFile("./a.log", "", function (err) {
-  if (err) {
-    console.log(err);
-  }
-});
+const ob = options;
+
 // 真实项目中调用下面即可记录错误日志
-logger.log("这是一条日志1");
+console.log("这是一条日志1");
 
 /**
  * 结果字符串处理，处理不合格的url链接
@@ -77,7 +64,7 @@ const reg_assets = new RegExp(
 匹配 ![]() 形式
 */
 const reg_img = /!\[\s*([^\x00-\x1f\x7f]*?)\s*\]\(\s*(?!\S+:\/\/)(.+?)\s*\)/g;
-//console.log("reg_img\n",reg_img.source,"\n");
+console.log("reg_img\n",reg_img.source,"\n");
 
 /*
 拼接的regExp结果
@@ -106,7 +93,7 @@ const reg_new = new RegExp(
     ")",
   "g"
 );
-logger.log("reg_new\n", reg_new.source, "\n");
+console.log("reg_new\n", reg_new.source, "\n");
 
 /**
  * 文章渲染之前批处理 替换链接，修复路径
