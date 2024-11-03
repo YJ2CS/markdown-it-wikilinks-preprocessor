@@ -13,4 +13,4 @@ const markdownItLinkPreprocessor = (md) => {
     });
 };
 
-module.exports = markdownItLinkPreprocessor;
+export default markdownItLinkPreprocessor;

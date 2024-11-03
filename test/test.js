@@ -1,7 +1,7 @@
-'use strict';
-
-const markdownItLinkPreprocessor = require('../index');
-const MarkdownIt = require('markdown-it');
+import markdownItLinkPreprocessor from "../index.js"
+import MarkdownIt from "markdown-it"
+// const markdownItLinkPreprocessor = require('../index');
+// const MarkdownIt = require('markdown-it');
 
 const md = new MarkdownIt();
 md.use(markdownItLinkPreprocessor);
