@@ -81,7 +81,7 @@ const markdownItLinkPreprocessor = (md) => {
             debugger
             href = clearPath(href);
             [label, href] = label ? [label, href] : [href, href];
-            return `[${label.trim()}](${ob.img_prefix}${href.trim()}${ob.img_extend})`;
+            return `![${label.trim()}](${ob.img_prefix}${href.trim()}${ob.img_extend})`;
         });
     });
 };
